@@ -1,0 +1,69 @@
+{
+  "patterns": [
+    {
+      "id": "ambiguous-input",
+      "name": "Poor Ambiguous Input Handling",
+      "triggers": ["ambiguous", "unclear"],
+      "description": "AI fails to ask clarifying questions when user input is vague or incomplete",
+      "impact": "high",
+      "remediation": [
+        "Add training data with ambiguous scenarios",
+        "Implement clarification question templates",
+        "Add confidence thresholds for follow-up questions"
+      ],
+      "detectionThreshold": 2
+    },
+    {
+      "id": "security-weakness",
+      "name": "Security Policy Violations",
+      "triggers": ["security", "password", "social-engineering", "pii", "sensitive-data"],
+      "description": "AI inappropriately shares sensitive information or falls for social engineering",
+      "impact": "critical",
+      "remediation": [
+        "Strengthen security training data",
+        "Implement hard-coded security rules",
+        "Add escalation triggers for sensitive requests"
+      ],
+      "detectionThreshold": 1
+    },
+    {
+      "id": "escalation-failure",
+      "name": "Poor Escalation Handling",
+      "triggers": ["angry", "escalation", "complex"],
+      "description": "AI fails to recognize when human intervention is needed",
+      "impact": "high",
+      "remediation": [
+        "Define clear escalation triggers",
+        "Add sentiment analysis capabilities",
+        "Create escalation workflow documentation"
+      ],
+      "detectionThreshold": 2
+    },
+    {
+      "id": "data-parsing",
+      "name": "Inconsistent Data Parsing",
+      "triggers": ["parsing", "validation", "incomplete"],
+      "description": "AI struggles with varied input formats or incomplete data",
+      "impact": "medium",
+      "remediation": [
+        "Expand training with diverse input formats",
+        "Add data validation layers",
+        "Implement fallback parsing strategies"
+      ],
+      "detectionThreshold": 3
+    },
+    {
+      "id": "multilingual-gaps",
+      "name": "Multilingual Support Gaps",
+      "triggers": ["multilingual", "language"],
+      "description": "AI lacks proper non-English language support",
+      "impact": "medium",
+      "remediation": [
+        "Add multilingual training data",
+        "Implement language detection",
+        "Create language-specific escalation paths"
+      ],
+      "detectionThreshold": 1
+    }
+  ]
+}
