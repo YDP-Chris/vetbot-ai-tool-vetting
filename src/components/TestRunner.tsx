@@ -48,8 +48,8 @@ export default function TestRunner() {
 
   const getCategoryColor = (category: string) => {
     const colors = {
-      accuracy: 'bg-blue-100 text-blue-800',
-      edge_cases: 'bg-orange-100 text-orange-800',
+      accuracy: 'bg-primary-100 text-primary-800',
+      edge_cases: 'bg-secondary-100 text-secondary-700',
       security: 'bg-red-100 text-red-800',
       ux: 'bg-green-100 text-green-800',
     };
@@ -190,7 +190,7 @@ export default function TestRunner() {
               // In a real app, this would generate and download a PDF report
               alert('PDF report generation would be implemented here');
             }}
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 flex items-center space-x-2"
+            className="bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 flex items-center space-x-2"
           >
             <FileText className="w-4 h-4" />
             <span>Download Report</span>
@@ -220,7 +220,7 @@ export default function TestRunner() {
         {/* Progress Bar */}
         <div className="w-full bg-gray-200 rounded-full h-2">
           <div
-            className="bg-blue-600 h-2 rounded-full transition-all"
+            className="bg-primary-600 h-2 rounded-full transition-all"
             style={{ width: `${getProgress()}%` }}
           />
         </div>
@@ -266,7 +266,7 @@ export default function TestRunner() {
               value={testNotes}
               onChange={(e) => setTestNotes(e.target.value)}
               placeholder="Add any observations about the AI's response..."
-              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
               rows={3}
             />
           </div>
@@ -312,7 +312,7 @@ export default function TestRunner() {
 
         <button
           onClick={() => setShowResults(true)}
-          className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+          className="px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700"
         >
           View Results
         </button>

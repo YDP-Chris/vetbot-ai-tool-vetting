@@ -117,13 +117,13 @@ export default function ToolSelector({ onConfigSelected }: ToolSelectorProps) {
                   }}
                   className={`p-6 rounded-lg border-2 text-left transition-all ${
                     selectedCategory === category.id
-                      ? 'border-blue-500 bg-blue-50'
+                      ? 'border-primary-500 bg-primary-50'
                       : 'border-gray-200 hover:border-gray-300'
                   }`}
                 >
                   <div className="flex items-start space-x-4">
                     <Icon className={`w-6 h-6 mt-1 ${
-                      selectedCategory === category.id ? 'text-blue-600' : 'text-gray-400'
+                      selectedCategory === category.id ? 'text-primary-600' : 'text-gray-400'
                     }`} />
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-2">
@@ -154,7 +154,7 @@ export default function ToolSelector({ onConfigSelected }: ToolSelectorProps) {
                   onClick={() => setUseCase(useCaseOption)}
                   className={`p-4 rounded-lg border text-left transition-all ${
                     useCase === useCaseOption
-                      ? 'border-blue-500 bg-blue-50 text-blue-900'
+                      ? 'border-primary-500 bg-primary-50 text-primary-900'
                       : 'border-gray-200 hover:border-gray-300 text-gray-700'
                   }`}
                 >
@@ -173,7 +173,7 @@ export default function ToolSelector({ onConfigSelected }: ToolSelectorProps) {
                 value={useCase.startsWith('Custom: ') ? useCase.slice(8) : ''}
                 onChange={(e) => setUseCase(e.target.value ? `Custom: ${e.target.value}` : '')}
                 placeholder="e.g., Medical appointment scheduling with insurance verification"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
               />
             </div>
           </div>
@@ -190,7 +190,7 @@ export default function ToolSelector({ onConfigSelected }: ToolSelectorProps) {
               value={toolName}
               onChange={(e) => setToolName(e.target.value)}
               placeholder="e.g., ZenDesk AI Assistant, Custom Support Bot"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg text-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg text-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
               required
             />
           </div>
@@ -201,7 +201,7 @@ export default function ToolSelector({ onConfigSelected }: ToolSelectorProps) {
           <div className="text-center">
             <button
               type="submit"
-              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors"
+              className="bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-700 transition-colors"
             >
               Generate Testing Framework
             </button>
